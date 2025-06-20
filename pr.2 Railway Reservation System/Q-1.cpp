@@ -4,28 +4,28 @@ using namespace std;
 class Train{
 	public:
 		int tno;
-		string tname,source,dest,time;
-		void setDetails(int tno,string tname,string source,string dest,string time){
+		string tn,sou,dest,time;
+		void setDetails(int tno,string tn,string sou,string dest,string time){
 			this->tno = tno;
-			this->tname = tname;
-			this->source = source;
+			this->tn = tn;
+			this->sou = sou;
 			this->dest = dest;
 			this->time = time;
 		}
 		
 		void showAllTrain(){
 			cout<<"Train no :- "<<this->tno<<endl;
-			cout<<"Train Name :- "<<this->tname<<endl;
-			cout<<"Train Source :- "<<this->source<<endl;
+			cout<<"Train Name :- "<<this->tn<<endl;
+			cout<<"Train Source :- "<<this->sou<<endl;
 			cout<<"Train Destination :- "<<this->dest<<endl;
 			cout<<"Train Time :- "<<this->time<<endl;
 		}
 };
 
-main(){
+int main(){
 	Train t[50];
 	int ch,tno;
-	string tname,source,dest,time;
+	string tn,sou,dest,time;
 	int cnt=0,i;
 	while(1){
 		cout<<"Press 1 Add New Train Record"<<endl;
@@ -45,15 +45,15 @@ main(){
 				cout<<"Enter Train Number :- ";
 				cin>>tno;
 				cout<<"Enter Train Name :- ";
-				cin>>tname;
+				cin>>tn;
 				cout<<"Enter Source :- ";
-				cin>>source;
+				cin>>sou;
 				cout<<"Enter Destination :- ";
 				cin>>dest;
 				cout<<"Enter Train Time :- ";
 				cin>>time;
-				t[cnt++].setDetails(tno,tname,source,dest,time);
-				cout<<"----Train successfully add----------"<<endl;
+				t[cnt++].setDetails(tno,tn,sou,dest,time);
+				cout<<"Train successfully added"<<endl;
 			break;
 			
 			case 2:
@@ -64,15 +64,15 @@ main(){
 			
 			case 3:
 				int tn;
-				cout<<"Enter train no. :-"<<endl;
+				cout<<"Enter Train no :-"<<endl;
 				cin>>tn;
 				
 				for(i=0;i<cnt;i++){
 					if(t[i].tno==tn){
-						cout<<"Train Name :- "<<t[i].tname<<endl;
-						cout<<"Train Source :- "<<t[i].source<<endl;
-						cout<<"Train Destination :- "<<t[i].dest<<endl;
-						cout<<"Train Time :- "<<t[i].time<<endl;
+						cout<<"T Name :- "<<t[i].tn<<endl;
+						cout<<"T Source :- "<<t[i].sou<<endl;
+						cout<<"T Destination :- "<<t[i].dest<<endl;
+						cout<<"T Time :- "<<t[i].time<<endl;
 					}
 				}
 		}
